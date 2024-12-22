@@ -1,10 +1,10 @@
 // <------------------------------------------- IMPORT AND CONFIGURATION -------------------------->
-require('dotenv').config({ path: '../.env' });
-const express = require('express');
-const mongoose = require('mongoose');
-const cors = require('cors')
-dotenv.config();
-const app = express();
+require('dotenv').config({ path: '../.env' }); // Load environment variables first
+const express = require('express'); // Import Express
+const mongoose = require('mongoose'); // Import Mongoose for MongoDB
+const cors = require('cors'); // Import CORS middleware
+
+const app = express(); // Initialize Express app
 // <------------------------------------------- DATABASE CONNECTION------------------------------->
 mongoose.connect(process.env.MONGODB_URI);
 // log connection status to terminal on start
@@ -22,5 +22,5 @@ app.use(cors())
 
 // <------------------------------------------- Start Server --------------------------------------->
 app.listen(3001, () => {
-    console.log('movie recommendation app is live, start posting');
+    console.log('React Portfolio App is live, let\'s go!');
   });
